@@ -1,4 +1,3 @@
-# Dockerfile
 FROM ubuntu:latest
 
 # Install Python3, pip, and Flask
@@ -13,4 +12,4 @@ COPY application.py /opt/app/application.py
 EXPOSE 5000
 
 # Command to run the Flask app
-CMD FLASK_APP=/opt/app/application.py flask run --host=0.0.0.0
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
