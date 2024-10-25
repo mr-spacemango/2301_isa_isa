@@ -28,7 +28,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 script {
-                    docker.image('2301_isa_isa:latest').run("-d --name 2301_isa_isa-p 5000:5000")
+                    docker.image('2301_isa_isa:latest').run("-d --name 2301_isa_isa -p 5000:5000")
                 }
             }
         }
